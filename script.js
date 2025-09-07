@@ -6,15 +6,18 @@ const addCategories = async () => {
     const data = res.categories;
     data.forEach(category => {
         if (category.category_name !== 'Bamboo') {
-        categoryContainer.innerHTML += `<div onclick='highlightCategoryName(${category.id})' id='${category.id}' class="hover:bg-green-500 py-[8px] pl-[10px] rounded-[4px] cursor-pointer">
-                                           <h6 class="font-[400] text-[#1F2937]">${category.category_name + 's'}</h6>
-                                       </div>`
+        categoryContainer.innerHTML += `<div class="category-name-container hover:bg-green-500 hover:text-white py-2 pl-2.5 rounded-[4px] 
+                                        cursor-pointer">
+                                             <h6 class="font-[400]">${category.category_name + 's'}</h6>
+                                        </div>`
+        
+        
                                     }
 
         else {
-            categoryContainer.innerHTML += `<div onclick='highlightCategoryName(${category.id})' id='${category.id}' class="hover:bg-green-500 py-[8px] pl-[10px] rounded-[4px] cursor-pointer">
-                                   <h6 class="font-[400] text-[#1F2937]">${category.category_name}</h6>
-                               </div>`
+             categoryContainer.innerHTML += `<div class="category-name-container hover:bg-green-500 hover:text-white py-2 pl-2.5 rounded-[4px] cursor-pointer">
+                  <h6 class="font-[400]">${category.category_name}</h6>
+             </div>` 
         }
     })
 }
@@ -34,17 +37,17 @@ const addCards = async () => {
     const res = await call.json();
     const data = res.plants;
     data.forEach(plant => {
-        cardContainer.innerHTML += `<div class="bg-white rounded-8 p-4 ">
-                                        <img class='max-h-[186px] w-full rounded-[8px]' src="${plant.image}" alt="">
+        cardContainer.innerHTML += `<div class="bg-white rounded-lg p-4 grid content-between">
+                                        <img class='max-h-[186.8px] w-full rounded-lg' src="${plant.image}" alt="">
                                         <h6 class="font-semibold text-[0.8rem] text-[#1F2937] mt-3">${plant.name}</h6>
                                         <p class="text-[0.7rem] text-[#1F2937] my-2">${plant.description}</p>
-                                        <div class="flex justify-between items-center">
-                                            <div class="bg-[#DCFCE7] py-[4px] px-[12px] rounded-full">
+                                        <div class="flex justify-between items-center mb-3">
+                                            <div class="bg-[#DCFCE7] py-1 px-3 rounded-full">
                                                 <h6 class="text-[0.8rem] font-[400] text-[#15803D]">${plant.category}</h6>
                                             </div>
-                                            <h6 class="text-[0.8rem] font-semibold">${'$' + plant.price}</h6>
+                                            <h6 class="text-[0.8rem] text-[#1F2937] font-semibold">${'৳' + plant.price}</h6>
                                         </div>
-                                        <button class="py-[12px] px-[20px] font-medium w-full rounded-full bg-[#15803D] text-white mt-3 cursor-pointer">Add to Cart</button>
+                                        <button class="py-3 px-5 font-medium w-full rounded-full bg-[#15803D] text-white cursor-pointer">Add to Cart</button>
                                     </div>`
     })
 }
