@@ -88,7 +88,7 @@ cartList.addEventListener('click', (e) => {
         if (cartList.children.length === 1) {
             const totalPrice = document.getElementById('total-price');
             totalPrice.classList.remove('border-t-[1px]', 'border-[#8C8C8C]')
-            cartList.classList.add('border-b-[1px]', 'border-[#8C8C8C]')
+            cartList.classList.remove('border-b-[1px]', 'border-[#8C8C8C]')
         }
     }
 })
