@@ -18,6 +18,7 @@ const displaySpinner = (boolean) => {
     }
 }
 
+displaySpinner(true)
 const addCards = async () => {
     cardContainer.innerHTML = ``;
     const call = await fetch('https://openapi.programming-hero.com/api/plants');
@@ -45,11 +46,13 @@ const addCards = async () => {
                                             w-full rounded-full bg-[#15803D] text-white 
                                              cursor-pointer">Add to Cart</button>
                                     </div>` 
+        displaySpinner(false)
         }
     )
 }
     
 addCards()
+
 
 const addCategories = async () => {
     const call = await fetch('https://openapi.programming-hero.com/api/categories');
@@ -100,7 +103,7 @@ categoryContainer.addEventListener('click', (e) => {
     allContainers.forEach(container => {
         container.classList.remove('bg-[#15803d]');
     });
-    
+
     categoryElement.classList.add('bg-[#15803d]')
     const allNames = document.querySelectorAll('.category-name');
     allNames.forEach(name => {
@@ -136,12 +139,13 @@ categoryContainer.addEventListener('click', (e) => {
                             <button id='${plant.id}' class="hover:bg-green-500 add-btn py-3 px-5 font-medium 
                                 w-full rounded-full bg-[#15803D] text-white 
                                  cursor-pointer">Add to Cart</button>
-                        </div>`              
-                    }
-                )
-            }
-        addCardsByCategory(id);
-   displaySpinner(false)
+                        </div>` 
+
+    displaySpinner(false)             
+                }
+            )
+        }
+    addCardsByCategory(id);
    }
 )
 
