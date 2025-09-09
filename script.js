@@ -60,7 +60,7 @@ const addCategories = async () => {
         categoryContainer.innerHTML += `<div id="${category.id}" class="category-name-container hover:bg-green-500 hover:text-white py-2 pl-2.5 rounded-[4px] cursor-pointer">
              <h6 class="category-name font-[400]">${category.category_name + 's'}</h6>
         </div>`
-                                    }
+        }
 
         else {
              categoryContainer.innerHTML += `<div id="${category.id}" class="category-name-container hover:bg-green-500 hover:text-white py-2 pl-2.5 rounded-[4px] cursor-pointer">
@@ -85,8 +85,8 @@ cartList.addEventListener('click', (e) => {
 
         if (cartList.children.length === 1) {
             const totalPrice = document.getElementById('total-price');
-            totalPrice.classList.remove('border-t-[1px]', 'border-[#1f2937]')
-            cartList.classList.remove('border-b-[1px]', 'border-[#1f2937]');
+            totalPrice.classList.remove('border-t-[1px]', 'border-[#8C8C8C]')
+            cartList.classList.remove('border-b-[1px]', 'border-[#8C8C8C]');
            }
        }
     }
@@ -100,6 +100,7 @@ categoryContainer.addEventListener('click', (e) => {
     allContainers.forEach(container => {
         container.classList.remove('bg-[#15803d]');
     });
+    
     categoryElement.classList.add('bg-[#15803d]')
     const allNames = document.querySelectorAll('.category-name');
     allNames.forEach(name => {
@@ -145,21 +146,20 @@ categoryContainer.addEventListener('click', (e) => {
 )
 
 cardContainer.addEventListener('click', (e) => {
-    
-if (e.target.className.includes('plant-name')) {
-    const elementId = e.target.id;
-    const modalContainer = document.getElementById('my_modal_5');
-    const modal = document.getElementById('modal-container');
-    const displayModal = async (plantId) => {
-        const call = await fetch(`https://openapi.programming-hero.com/api/plant/${plantId}`);
-        const res = await call.json();
-        const data = res.plants;
-        modal.innerHTML = `<h3 class="text-[1.5rem] font-extrabold mb-3">${data.name}</h3>
-                           <img class="rounded-lg max-h-[300px] w-full" src="${data.image}" alt="">
-                           <h5 class="mt-4"><span class="font-extrabold">Category: </span>${data.category}</h5>
-                           <h5 class="my-3"><span class="font-extrabold">Price: </span>${'৳' + data.price}</h5>
-                           <p ><span class="font-extrabold">Description: </span>${data.description}</p>
-                           <div class="modal-action">
+    if (e.target.className.includes('plant-name')) {
+        const elementId = e.target.id;
+        const modalContainer = document.getElementById('my_modal_5');
+        const modal = document.getElementById('modal-container');
+        const displayModal = async (plantId) => {
+            const call = await fetch(`https://openapi.programming-hero.com/api/plant/${plantId}`);
+            const res = await call.json();
+            const data = res.plants;
+            modal.innerHTML = `<h3 class="text-[1.5rem] font-extrabold mb-3">${data.name}</h3>
+                            <img class="rounded-lg max-h-[300px] w-full" src="${data.image}" alt="">
+                            <h5 class="mt-4"><span class="font-extrabold">Category: </span>${data.   category}</h5>
+                            <h5 class="my-3"><span class="font-extrabold">Price: </span>${'৳' + data.   price}</h5>
+                            <p ><span class="font-extrabold">Description: </span>${data.description}</p>
+                            <div class="modal-action">
                              <form method="dialog">
                                <!-- if there is a button in form, it will close the modal -->
                                <button class="btn">Close</button>
@@ -167,19 +167,19 @@ if (e.target.className.includes('plant-name')) {
                            </div>`
         modalContainer.showModal()
         }
-    displayModal(elementId)
-    }
+        displayModal(elementId)
+        }
     
     if (e.target.className.includes('add-btn')) {
         const totalPrice =  document.getElementById('total-price')
         totalPrice.classList.remove('hidden')
-        totalPrice.classList.add('flex', 'border-t-[1px]', 'border-[#1f2937]')
+        totalPrice.classList.add('flex', 'border-t-[1px]', 'border-[#8C8C8C]')
         const plantName = e.target.parentElement.children[1].innerText;
         const plantPrice = e.target.parentElement.children[3].children[1].children[1].innerText;
         const div = document.createElement('div');
         div.classList.add('cart-item', 'bg-[#F0FDF4]', 'px-3', 'py-2', 'flex', 'justify-between', 
         'items-center', 'rounded-lg');
-        cartList.classList.add('border-b-[1px]', 'border-[#1f2937]')
+        cartList.classList.add('border-b-[1px]', 'border-[#8C8C8C]')
         div.dataset.price = plantPrice; 
         div.innerHTML = `
           <div class="space-y-1">

@@ -31,7 +31,7 @@
              <button class="bg-[#FACC15] text-[#15803D] rounded-full py-[12px] px-[20px] cursor-pointer font-medium">Plant a Tree</button>
         </nav>
 
-        <div class="flex flex-col md:flex-row justify-between bg-[#CFF0DC] items-center border-[1px] border-black shadow-md/45 px-[30px] md:px-0">
+        <div class="flex flex-col md:flex-row justify-between bg-[#CFF0DC] items-center drop-shadow-md/45 px-[30px] md:px-0">
             <img src="assets/hero-leaf1.png" alt="">
 
             <div class="text-center my-7 md:my-0">
@@ -50,53 +50,54 @@
 
     <main>
         <section class="bg-[#f0fdf4] py-[100px] px-[30px] md:px-0">
-             <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-[#1f2937] text-center">Choose Your Trees</h4>
+            <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-[#1f2937] text-center">Choose Your Trees</h4>
 
-             <section class="flex flex-col md:flex-row gap-[30px] justify-center mt-10 mb-[100.4px]">
-                   <div class="md:max-w-[250px] w-full md:w-6/12 text-center md:text-left">
-                        <h5 class="text-xl font-semibold mb-4">Categories</h5>
-
-                        <div id="plant-category-container" class="space-y-[1.5px]">
-                            <div class="py-2 pl-0 md:pl-2.5 rounded-[4px]">
-                                <h6 class="font-medium">All Trees</h6>
-                            </div>
+            <section class="flex flex-col md:flex-row gap-[30px] justify-center mt-10 mb-[100.4px]">
+                <div class="md:max-w-[250px] w-full md:w-6/12 text-center md:text-left">
+                    <h5 class="text-xl font-semibold mb-4">Categories</h5> 
+                    <div id="plant-category-container" class="space-y-[1.5px]">
+                        <div class="py-2 pl-0 md:pl-2.5 rounded-[4px]">
+                            <h6 class="font-medium">All Trees</h6>
                         </div>
-                   </div>
+                    </div>
+                </div> 
 
-                   <div id="spinner" class="hidden max-w-[1090px]">
-                        <span class="loading loading-spinner loading-xs"></span>
-                        <span class="loading loading-spinner loading-sm"></span>
-                        <span class="loading loading-spinner loading-md"></span>
-                        <span class="loading loading-spinner loading-lg"></span>
-                        <span class="loading loading-spinner loading-xl"></span>
+                <div id="spinner" class="hidden max-w-[1090px]">
+                     <span class="loading loading-spinner loading-xs"></span>
+                     <span class="loading loading-spinner loading-sm"></span>
+                     <span class="loading loading-spinner loading-md"></span>
+                     <span class="loading loading-spinner loading-lg"></span>
+                     <span class="loading loading-spinner loading-xl"></span>
+                </div>
+                  
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] max-w-[1090px]" id="plant-card-container">
+    
+                </div> 
+                 
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                   <div id="modal-container" class="modal-box">
+                 
                    </div>
-                    
-                   <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] max-w-[1090px]" id="plant-card-container">
-                   </div>
-
-                   <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                      <div id="modal-container" class="modal-box">
-                      </div>
-                    </dialog>
-
-                   <div class="p-4 bg-white md:max-w-[250px] w-full md:w-6/12 rounded-2xl">
-                       <div id="cart-list" class="pb-[7.5px] mb-[8.5px] space-y-2">
-                            <h4 class="text-[1.25rem] font-semibold text-center md:text-left">Your Cart</h4>
+                </dialog> 
+                 
+                <div class="p-4 bg-white md:max-w-[250px] w-full md:w-6/12 rounded-2xl">
+                    <div id="cart-list" class="pb-[7.5px] mb-[8.5px] space-y-2">
+                         <h4 class="text-[1.25rem] font-semibold text-center md:text-left">Your Cart</h4>
+                    </div>
+                      
+                    <div id="total-price" class="pt-[7.5px] text-[#1f2937] justify-between font-medium hidden">
+                        <h4>Total:</h4>
+                        <div class="flex">
+                            <h4>৳</h4>
+                            <h4 id="amount-price">0</h4>
                         </div>
-                        
-                        <div id="total-price" class="pt-[7.5px] text-[#1f2937] justify-between font-medium hidden">
-                            <h4>Total:</h4>
-                            <div class="flex">
-                                <h4>৳</h4>
-                                <h4 id="amount-price">0</h4>
-                            </div>
-                        </div>
-                   </div>
-             </section>
+                    </div>
+                </div>
+            </section>
 
-             <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-[#1F2937] text-center">About the Campaign</h4>
+            <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-[#1F2937] text-center">About the Campaign</h4>
 
-             <section class="flex flex-col md:flex-row items-center mt-10 max-w-[1090px] w-full md:w-7/12 mx-auto gap-[30px]">
+            <section class="flex flex-col md:flex-row items-center mt-10 max-w-[1090px] w-full md:w-7/12 mx-auto gap-[30px]">
                 <img class="rounded-[10px]" src="assets/about.png" alt="">
                 
                 <div class="font-[400] text-[#1f2937]">
@@ -110,24 +111,24 @@
                         <li>Support for local communities</li>
                     </ol>
                 </div>
-             </section>
+            </section>
         </section>
 
         <section class="bg-[#cff0dc] py-[100px]">
-             <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-[#1F2937] text-center mb-[40px]">Our Impact</h4>
+            <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-[#1F2937] text-center mb-[40px]">Our Impact</h4>
              
-             <div class="flex flex-wrap flex-col md:flex-row gap-[50px] justify-center px-[30px] md:px-0">
-               <div class="bg-white py-10 text-center rounded-xl w-full md:w-4/12 md:max-w-[516.67px] shadow-sm/10">
+            <div class="flex flex-wrap flex-col md:flex-row gap-[50px] justify-center px-[30px] md:px-0">
+                <div class="bg-white py-10 text-center rounded-xl w-full md:w-4/12 md:max-w-[516.67px] shadow-sm/10">
                     <h3 class="text-[#15803d] text-[2rem] font-semibold">500K+</h3>
                     <h6 class="text-[#1f2937] font-[400]">Trees Planted</h6>
-               </div>
+                </div>
 
-               <div class="bg-white py-10 text-center rounded-xl w-full md:w-4/12 md:max-w-[516.67px] shadow-sm/10">
+                <div class="bg-white py-10 text-center rounded-xl w-full md:w-4/12 md:max-w-[516.67px] shadow-sm/10">
                     <h3 class="text-[#15803d] text-[2rem] font-semibold">120+</h3>
                     <h6 class="text-[#1f2937] font-[400]">Communities Involved</h6>
-               </div>
+                </div>
 
-               <div class="bg-white py-10 text-center rounded-xl w-full md:w-4/12 md:max-w-[516.67px] shadow-sm/10">
+                <div class="bg-white py-10 text-center rounded-xl w-full md:w-4/12 md:max-w-[516.67px] shadow-sm/10">
                     <h3 class="text-[#15803d] text-[2rem] font-semibold">30+</h3>
                     <h6 class="text-[#1f2937] font-[400]">Countries Reached</h6>
                </div>
@@ -135,19 +136,19 @@
         </section>
 
         <section class="py-[100px] bg-[#166534] px-[30px] md:px-0">
-               <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-white text-center mb-[40px]">Plant a Tree Today</h4>
+            <h4 class="text-[1.5rem] md:text-[2rem] font-semibold text-white text-center mb-[40px]">Plant a Tree Today</h4>
 
-               <form class="bg-[#15803d] p-4 md:p-10 rounded-xl mx-auto max-w-[650px]">
-                   <input class='bg-white w-full py-2.5 px-3 rounded-md border-none' type="text" name="" id="" placeholder="Your Name">
+            <form class="bg-[#15803d] p-4 md:p-10 rounded-xl mx-auto max-w-[650px]">
+                <input class='bg-white w-full py-2.5 px-3 rounded-md border-none' type="text" name="" id="" placeholder="Your Name">
 
-                   <input class='bg-white w-full py-2.5 px-3 rounded-md my-3 border-none' type="email" name="" id="" placeholder="Your Email Address">
+                <input class='bg-white w-full py-2.5 px-3 rounded-md my-3 border-none' type="email" name="" id="" placeholder="Your Email Address">
 
-                   <select class='bg-white w-full py-2.5 px-3 rounded-md border-none' id="">
-                        <option class="font-[400] text-[#1F2937]">Number of Trees</option>
-                   </select>
+                <select class='bg-white w-full py-2.5 px-3 rounded-md border-none' id="">
+                    <option class="font-[400] text-[#1F2937]">Number of Trees</option>
+                </select>
 
-                   <button class="bg-[#facc15] text-[#15803d] py-3 rounded-full w-full cursor-pointer font-medium mt-5">Donate Now</button>
-               </form>
+                <button class="bg-[#facc15] text-[#15803d] py-3 rounded-full w-full cursor-pointer font-medium mt-5">Donate Now</button>
+            </form>
         </section>
     </main>
 
