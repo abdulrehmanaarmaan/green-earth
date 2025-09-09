@@ -83,17 +83,15 @@ cartList.addEventListener('click', (e) => {
 
         const amountPrice = document.getElementById('amount-price');
         amountPrice.innerText = Number(amountPrice.innerText) - itemPrice;
-
         cartItem.remove();
 
         if (cartList.children.length === 1) {
             const totalPrice = document.getElementById('total-price');
             totalPrice.classList.remove('border-t-[1px]', 'border-[#8C8C8C]')
-            cartList.classList.remove('border-b-[1px]', 'border-[#8C8C8C]');
-           }
-       }
+            cartList.classList.add('border-b-[1px]', 'border-[#8C8C8C]')
+        }
     }
-)
+})
 
 categoryContainer.addEventListener('click', (e) => {
     const categoryElement = e.target.closest('.category-name-container');
