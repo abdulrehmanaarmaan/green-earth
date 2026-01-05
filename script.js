@@ -79,6 +79,7 @@ addCategories()
 cartList.addEventListener('click', (e) => {
     if (e.target.classList.contains('remove-cart')) {
         const cartItem = e.target.closest('.cart-item');
+        console.log(cartItem.dataset.price)
         const itemPrice = Number(cartItem.dataset.price);
 
         const amountPrice = document.getElementById('amount-price');
@@ -182,7 +183,7 @@ cardContainer.addEventListener('click', (e) => {
         div.classList.add('cart-item', 'bg-[#F0FDF4]', 'px-3', 'py-2', 'flex', 'justify-between', 
         'items-center', 'rounded-lg');
         cartList.classList.add('border-b-[1px]', 'border-[#8C8C8C]')
-        div.dataset.price = plantPrice; 
+        div.dataset.price = plantPrice;
         div.innerHTML = `
           <div class="space-y-1">
               <h6 class="text-[#1F2937] text-[0.8rem] font-semibold">${plantName}</h6>
