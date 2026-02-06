@@ -27,7 +27,7 @@ https://cheerful-fudge-330e9e.netlify.app
 
 - Detailed popup for each plant
 
--Adding or removing from cart
+- Adding or removing from cart
 
 ### Setup Instructions
 1. Clone the repository.
