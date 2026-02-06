@@ -23,25 +23,11 @@ https://cheerful-fudge-330e9e.netlify.app
 
 ### Key Features List
 
--Role-based authentication for HR and employees
+- Filtering based on various categories of plants
 
--Asset request and approval workflow
+- Detailed popup for each plant
 
--Employee asset assignment and return management
-
--Package-based subscription system for HRs
-
--Real-time dashboard analytics
-
--Secure private routes
-
--Responsive UI for mobile, tablet and desktop
-
--Profile management
-
--Payment history tracking
-
--Modern UX with loaders and toasts
+-Adding or removing from cart
 
 ### Setup Instructions
 1. Clone the repository.
