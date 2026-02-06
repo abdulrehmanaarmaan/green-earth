@@ -23,13 +23,13 @@ https://cheerful-fudge-330e9e.netlify.app
 
 ### Key Features List
 
-- Dynamic filtering system to browse plants by multiple categories
+-Dynamic filtering system to browse plants by multiple categories
 
-- Interactive plant detail modal with structured information
+-Interactive plant detail modal with structured information
 
-- Add-to-cart and remove-from-cart functionality
+-Add-to-cart and remove-from-cart functionality
 
-- Clean and responsive user interface across devices
+-Clean and responsive user interface across devices
 
 ### Setup Instructions
 1. Clone the repository.
