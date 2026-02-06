@@ -1,19 +1,102 @@
-1) What is the difference between var, let, and const?
+### Project name
+Green Earth
 
-Ans. When we declare a variable using var or let, we can reassign the variable, but this case is not the same when we declare a variable using const. The difference between var and let is that let is one of the features of ES6, but var is not. Variables declared by both var and let can be hoisted but, those declared by var are also initialized after hoisting but the ones declared by let are not.
+### Purpose
+Sustainabilty-Focused Web Application
 
-2) What is the difference between map(), forEach(), and filter()?
+### Description
+Green Earth is designed to promote environmental awareness and eco-friendly practices. The platform presents information in a clean, user-friendly interfaces, helping users explore green initiatives, environmental tips and impactful actions for a better planet. 
 
-Ans. forEach() is for looping through elements without returning anything. map() loops through elements and returns a new array of transformed values. filter() loops through elements and returns a new array of elements that pass a given condition.
+### Live URL
+https://cheerful-fudge-330e9e.netlify.app
 
-3) What are arrow functions in ES6?
+### Screenshot
+<img alt="Screenshot 2026-01-05 013324" src="https://github.com/user-attachments/assets/57826628-c0bc-4e90-a75b-f12152b92d3d" width='900'/>
 
-Ans. Arrow functions perform the same work as normal functions, but the syntax for using them is different from that of normal functions. Arrow functions are mostly used as inline functions. We cannot use the arguments keyword for arrow functions.
+### Technologies Used
+**Frontend** 
 
-4) How does destructuring assignment work in ES6?
+-React 
 
-Ans. Destructuring assignment in ES6 is a convenient way to extract values from arrays or properties from objects into distinct variables in a single statement. It uses a pattern on the left-hand side to match elements or properties of the value on the right-hand side.
+-Tailwind CSS
 
-5) Explain template literals in ES6. How are they different from string concatenation?
+-TanStack Query 
 
-Ans. In the concept of string concatenation, we use the '+' operater to join more than one strings, but we dont'need to do that for template literals. Template literals are also actually strings but are enclosed by bacticks (`) instead of single or double quotation marks. They allow embedding variables or expressions directly inside the string and multi-line strings without escape characters.
+-Axios
+
+-Recharts
+
+**Backend**
+
+-Node.js
+
+-Express.js
+
+-MongoDB
+
+-Firebase
+
+### Key Features List
+
+-Role-based authentication for HR and employees
+
+-Asset request and approval workflow
+
+-Employee asset assignment and return management
+
+-Package-based subscription system for HRs
+
+-Real-time dashboard analytics
+
+-Secure private routes
+
+-Responsive UI for mobile, tablet and desktop
+
+-Profile management
+
+-Payment history tracking
+
+-Modern UX with loaders and toasts
+
+### npm Packages Used 
+
+-react
+
+-react-router-dom
+
+-@tanstack/react-query
+
+-axios, firebase
+
+-react-hot-toast
+
+-react-icons
+
+-lucide-react 
+
+-framer-motion
+
+-recharts
+
+-tailwindcss
+
+-daisyui
+
+### Setup Instructions
+1. Clone the repository.
+2. Install dependencies using npm install.
+3. Create a .env file with the required environment variables.
+4. Start the development server using npm run dev.
+
+### Environment Variables Configuration
+Firebase configuration keys (API key, auth domain, project ID, storage bucket, messaging sender ID, app ID), backend API base URL, and payment gateway public key (if applicable)
+
+### Run The Project
+
+Client: npm run dev
+
+Server: nodemon index.js
+
+### Clone The Repositories
+- https://github.com/abdulrehmanaarmaan/assetverse-client.git
+- https://github.com/abdulrehmanaarmaan/assetverse-server.git
