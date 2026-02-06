@@ -14,27 +14,12 @@ https://cheerful-fudge-330e9e.netlify.app
 <img alt="Screenshot 2026-01-05 013324" src="https://github.com/user-attachments/assets/57826628-c0bc-4e90-a75b-f12152b92d3d" width='900'/>
 
 ### Technologies Used
-**Frontend** 
 
--React 
+-HTML5
 
 -Tailwind CSS
 
--TanStack Query 
-
--Axios
-
--Recharts
-
-**Backend**
-
--Node.js
-
--Express.js
-
--MongoDB
-
--Firebase
+-JavaScript
 
 ### Key Features List
 
@@ -58,45 +43,10 @@ https://cheerful-fudge-330e9e.netlify.app
 
 -Modern UX with loaders and toasts
 
-### npm Packages Used 
-
--react
-
--react-router-dom
-
--@tanstack/react-query
-
--axios, firebase
-
--react-hot-toast
-
--react-icons
-
--lucide-react 
-
--framer-motion
-
--recharts
-
--tailwindcss
-
--daisyui
-
 ### Setup Instructions
 1. Clone the repository.
-2. Install dependencies using npm install.
-3. Create a .env file with the required environment variables.
-4. Start the development server using npm run dev.
+2. Open index.html in browser.
 
-### Environment Variables Configuration
-Firebase configuration keys (API key, auth domain, project ID, storage bucket, messaging sender ID, app ID), backend API base URL, and payment gateway public key (if applicable)
-
-### Run The Project
-
-Client: npm run dev
-
-Server: nodemon index.js
-
-### Clone The Repositories
+### Clone The Repository
 - https://github.com/abdulrehmanaarmaan/green-earth.git
 
